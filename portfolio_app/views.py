@@ -19,16 +19,10 @@ def index(request):
     return render(request, 'index.html', {'form': index})
 
 
-# def access(request):
-#     work_list = PreviousWork.objects.all()
-#     # work_dict = {'access_records':work_list}
-#     return render(request, 'index.html', {'work_list': work_list})
-
 def index(request):
         work_list = PreviousWork.objects.all()
         context = {
             'work_list': work_list
         }
-        print(work_list)
-
+        # print(work_list)
         return render(request, 'index.html', context)
