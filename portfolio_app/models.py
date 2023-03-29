@@ -16,8 +16,8 @@ class Contact(models.Model):
 
 class PreviousWork(models.Model):
     project_name = models.CharField(max_length=128, null=True)
-    img_url = models.ImageField(
-        null=True, upload_to='staticfiles/assets/images', default='images/default.jpg')
+    img = models.ImageField(
+        null=True, upload_to='staticfiles/assets/images/work')
     date = models.DateField(null=True)
     url = models.URLField(max_length=128, null=True)
     status = models.CharField(max_length=264, unique=True, null=True)
