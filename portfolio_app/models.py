@@ -1,5 +1,4 @@
 from django.db import models
-from django.shortcuts import render
 
 # Create your models here.
 
@@ -27,9 +26,4 @@ class PreviousWork(models.Model):
         return str(self.project_name)
 
 
-    def portfolio_view(request):
-        work_list = PreviousWork.objects.all()
-        context = {
-            'work_list': work_list
-        }
-        return render(request, 'index.html', context)
+    
